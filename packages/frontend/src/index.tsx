@@ -1,4 +1,4 @@
-import { LocationProvider } from "@reach/router";
+import { BrowserRouter } from "react-router-dom";
 import { Buffer } from "buffer";
 import process from "process";
 import React from "react";
@@ -17,10 +17,10 @@ if (typeof (window as any).process === "undefined") {
 }
 
 ReactDOM.render(
-  <LocationProvider>
+  <BrowserRouter>
     <div className="container" style={{ height: "100vh" }}>
       <Routes />
     </div>
-  </LocationProvider>,
+  </BrowserRouter>,
   document.getElementById("root")
 );
